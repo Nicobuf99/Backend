@@ -91,7 +91,12 @@ class productManager {
 }
 
 const manager = new productManager("products.txt");
-manager.addProduct("producto prueba", "Este es un producto prueba", 200, "Sin imagen", "abc123", 25);
+manager.addProduct("Producto 1", "Descripción del producto 1", 100, "Sin imagen", "code1", 10);
+manager.addProduct("Producto 2", "Descripción del producto 2", 200, "Sin imagen", "code2", 5);
+manager.addProduct("Producto 3", "Descripción del producto 3", 150, "Sin imagen", "code3", 20);
+manager.addProduct("Producto 4", "Descripción del producto 4", 120, "Sin imagen", "code4", 8);
+manager.addProduct("Producto 5", "Descripción del producto 5", 180, "Sin imagen", "code5", 15);
+
 
 const products = manager.getProducts();
 console.log(products);
@@ -103,3 +108,6 @@ fs.readFile("products.txt", "utf-8", (err, data) => {
     console.log(JSON.parse(data));
   }
 });
+
+export default productManager;
+
